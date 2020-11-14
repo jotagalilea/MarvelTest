@@ -28,7 +28,9 @@ interface MarvelEndpoints {
 
 
 	/**
-	 * Request for a single character's info.
+	 * Request for a single character's info. This endpoint is never used because it doesn't bring
+	 * any info different from the previous one, but the same data. When navigating to a character's
+	 * detail screen the app already has all the info needed.
 	 */
 	@GET("/v1/public/characters/{id}$apikey_get")
 	fun getCharacterDetail(

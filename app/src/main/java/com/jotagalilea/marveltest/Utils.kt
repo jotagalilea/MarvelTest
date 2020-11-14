@@ -6,6 +6,11 @@ import java.security.MessageDigest
  * Utils class intended for constants and functions that are not appropriate to be defined
  * into other files or classes.
  */
+
+/**
+ * Possible sizes of characters images from the API. They must be appended to the path that
+ * Picasso API is about to process at each request.
+ */
 object ImgUtils {
 	const val IMG_PORTRAIT_SMALL = "/portrait_small"
 	const val IMG_PORTRAIT_MEDIUM = "/portrait_medium"
