@@ -3,4 +3,11 @@
     <string name="Character_example">Character Example</string>
     <string name="Char_description_example">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
     <string name="list_loading_error">There has been a problem, please swipe down to reload</string>
+    <string name="comics_w_placeholder">Comics: %1s</string>
+    <string name="series_w_placeholder">Series: %1s</string>
+    <string name="events_w_placeholder">Events: %1s</string>
+    <string name="stories_w_placeholder">Stories: %1s</string>
+    <string name="detail">Detail</string>
+    <string name="wiki">Wiki</string>
+    <string name="comic">Comic</string>
 </resources>

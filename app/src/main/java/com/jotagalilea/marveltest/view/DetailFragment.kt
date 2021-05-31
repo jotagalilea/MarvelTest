@@ -1,5 +1,6 @@
 package com.jotagalilea.marveltest.view
 
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -8,6 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.graphics.drawable.toBitmap
+import androidx.palette.graphics.Palette
 import com.jotagalilea.marveltest.ImgUtils
 import com.jotagalilea.marveltest.R
 import com.jotagalilea.marveltest.model.Character
@@ -25,6 +29,7 @@ class DetailFragment : Fragment() {
 	private lateinit var nameText: TextView
 	private lateinit var descriptionText: TextView
 	private lateinit var image: ImageView
+	private lateinit var container: ConstraintLayout
 
 	private val TAG_PICASSO_ERROR = "PICASSO ERROR"
 	private val TAG_PICASSO_SUCCESS = "PICASSO SUCCESS"
@@ -48,6 +53,7 @@ class DetailFragment : Fragment() {
 		nameText = view.findViewById(R.id.detail_name)
 		descriptionText = view.findViewById(R.id.detail_description)
 		image = view.findViewById(R.id.detail_image)
+		container = view.findViewById(R.id.detail_container)
 		nameText.text = character.name
 		descriptionText.text = character.description
 		setImage()
@@ -70,6 +76,9 @@ class DetailFragment : Fragment() {
 			.into(image, object: Callback {
 				override fun onSuccess() {
 					Log.d(TAG_PICASSO_SUCCESS, "Success retrieving image")
+					val dominantColor = Palette.generate(image.drawable.toBitmap()).getDominantColor(resources.getColor(R.color.primaryColor))
+					val background = container.background
+					background.setTint(dominantColor)
 				}
 				override fun onError(e: Exception?) {
 					image.setImageResource(R.drawable.ic_error)

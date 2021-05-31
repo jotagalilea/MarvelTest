@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PrimaryButton.Rounded" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="cornerRadius">25dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/primaryColor</item>
+        <item name="iconTint">@android:color/white</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+</resources>
